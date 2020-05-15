@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+    integrity="sha256-FiZMk1zgTeujzf/+vomWZGZ9r00+xnGvOgXoj0Jo1jA=" crossorigin="anonymous"></script>
+  <script src="./Card.js" type="text/babel"></script>
+  <script src="./data.js"></script>
+</head>
+<!-- By default JSX is alwys in HTML mode but when it encouters javascript it recognizes it. -->
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ReactDOM.render takes 2 args:
+    // 1. what we want to render - this first element is a react element not a DOM element
+    // 2. where we want to render it. The where is an actual DOM element. Something that
+    // already exist in our HTML as a page load.
+
+    // A couple of things to note is that one props are immutable. They are managed by the parent. They are never managed by the component itself. All components with there props are meant to be pure functions. Pure means that given the same input it will always return the same output, so you never change or mutate props they are meant to be totally pure or remain unmutated or unchanged.
+
+    ReactDOM.render(
+      <div className="row">
+        <Card name={data[0].instructor} title={data[0].course} />
+        <Card name={data[1].instructor} title={data[1].course} />
+        <Card name={data[2].instructor} title={data[2].course} />
+        <Card name={data[3].instructor} title={data[3].course} />
+      </div>,
+      document.getElementById('root'));
+  </script>
+</body>
+
+</html>

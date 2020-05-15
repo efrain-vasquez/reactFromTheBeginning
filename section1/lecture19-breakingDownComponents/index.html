@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Materialize CSS which we will use for some basic layout stuff-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- this is the font that we will use same as the font airbnb uses -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- This is our css file -->
+  <link href="CitiesContainer.css" rel="stylesheet">
+
+  <!-- This is React itself, which we need because we use react also babel uses React.createElement() -->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!-- This is ReactDOM whose job is to manage the react elements, as well as manage the virtual DOM and get the real DOM to look like its supposed to.-->
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- We have babel to transpile the JSX and ES6 that we use for the browser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  <!-- This file needs to come before CitiesContainer.js because CitiesContainer.js will use the City,js file. -->
+  <script type="text/babel" src="City.js"></script>
+  <!-- This is our actual component -->
+  <script type="text/babel" src="CitiesContainer.js"></script>
+  <!-- This is where our entry point will be. -->
+  <script type="text/babel" src="app.js"></script>
+</head>
+
+<body>
+  <!-- This <div> is where react will run </div>-->
+  <div id="root"></div>
+</body>
+
+</html>
