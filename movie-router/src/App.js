@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Home} />
+        {/* this.props is just the props for the movie component. match is built by the Router. params is an object always available inside of match. and then there will be a property on params for every single wild card that matches this route and the wild card we have established is called /movieId */}
         <Route exact path="/movie/:movieId" component={Movie} />
       </div>
     </Router>
