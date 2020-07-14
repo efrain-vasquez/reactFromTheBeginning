@@ -1,0 +1,8 @@
+.spinner-wrapper {
+  position: absolute;
+  left: 50%;
+  /* this is a common trick to center something horizontally with absolute positioning */
+  transform: translateX(-50%);
+  /* this will roughly center it vertically */
+  top: 40%;
+}
