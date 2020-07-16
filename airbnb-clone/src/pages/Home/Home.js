@@ -87,7 +87,7 @@ class Home extends Component {
     } else {
       return (
         // we have two div's now or two elements and we can only return one so to fix this and make JSX happy we can wrap both div's or elements in one div thus allowing us to return only one div or element
-        <div>
+        <>
           <div className="container-fluid">
             <div className="row">
               <div className="home col s12">
@@ -145,7 +145,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </>
       );
     }
   }

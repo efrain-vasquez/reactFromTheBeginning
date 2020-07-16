@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./utility/NavBar/NavBar.js";
 import Home from "./pages/Home/Home.js";
 import SingleFullVenue from "./pages/SingleFullVenue/SingleFullVenue";
+import Modal from "./utility/Modal/Modal";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         {/* we need to get this particular venue :vid from the API */}
         <Route exact path="/venue/:vid" component={SingleFullVenue} />
+        <Route path="/" component={Modal} />
       </Router>
     );
   }

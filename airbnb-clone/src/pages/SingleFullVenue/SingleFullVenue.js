@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./SingleFullVenue.css";
 import axios from "axios";
 import Point from "./Point";
-import App from "../../App";
 
 class SingleFullVenue extends Component {
   state = {
@@ -113,7 +112,6 @@ class SingleFullVenue extends Component {
                 <option value="6">6 Guests</option>
                 <option value="7">7 Guests</option>
                 <option value="8">8 Guests</option>
-                <option value="9">9 Guests</option>
               </select>
             </div>
             <div className="col s12 center">
